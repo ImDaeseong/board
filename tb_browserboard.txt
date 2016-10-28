@@ -1,0 +1,20 @@
+if exists (select * from sysobjects where id = object_id(N'[dbo].[TB_BROWSERBOARD]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[TB_BROWSERBOARD]
+GO
+
+CREATE TABLE [dbo].[TB_BROWSERBOARD] (
+	[BROWSERNUMBER] [int] NOT NULL ,
+	[ID] [varchar] (12) NULL ,
+	[PASSWORD] [varchar] (12) NULL ,
+	[EMAIL] [varchar] (100) NULL ,
+	[NAME] [varchar] (12) NULL ,
+	[TITLE] [varchar] (255) NULL ,
+	[CREATEDDATE] [datetime] NOT NULL ,
+	[READCOUNT] [int] NULL ,
+	[DETAIL] [text] NULL ,
+	[REFNUM] [int] NULL ,
+	[STEPNUM] [int] NULL ,
+	[LEVELNUM] [int] NULL 
+)
+GO
+
